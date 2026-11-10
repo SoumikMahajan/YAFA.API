@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FirebaseAdmin" Version="3.4.0" />
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.73.0" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.23" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.8.23" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.22" />
+    <PackageReference Include="QuestPDF" Version="2026.9.0" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.12.4" />
+    <PackageReference Include="Stripe.net" Version="52.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Yafa.Domain\Yafa.Domain.csproj" />
+    <ProjectReference Include="..\Yafa.Infrastructure\Yafa.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\firebase\" />
+    <Folder Include="wwwroot\ThumbnailImages\TNLocation\" />
+    <Folder Include="wwwroot\ThumbnailImages\TNPropertyImage\" />
+    <Folder Include="wwwroot\ThumbnailImages\TNProfilePic\" />
+    <Folder Include="wwwroot\UploadFiles\Location\" />
+    <Folder Include="wwwroot\UploadFiles\PropertyImage\" />
+    <Folder Include="wwwroot\UploadFiles\ProfilePic\" />
+    <Folder Include="YafaLogs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\login.html" />
+  </ItemGroup>
+
+</Project>

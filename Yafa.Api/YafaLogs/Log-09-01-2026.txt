@@ -1,0 +1,169 @@
+
+[JOB:STARTED] 01 September 2026 04:18:34 AM UTC
+  :[Job]: CheckInReminderJob
+  :[Message]: Job triggered at 04:18:34 UTC
+---------------------------------------------------------------------------------------------
+
+[JOB:PROCESSING] 01 September 2026 04:18:35 AM UTC
+  :[Job]: CheckInReminderJob
+  :[Message]: Found 1 booking(s) for today. Starting notifications.
+---------------------------------------------------------------------------------------------
+
+[ERROR] 01 September 2026 09:48:35 AM
+  :[LoggedInUser]: anonymous
+  :[Message]: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.
+A transaction that was started in a MARS batch is still active at the end of the batch. The transaction is rolled back.
+  :[StackTrace]:    at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__210_1(IAsyncResult result)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Yafa.Infrastructure.Repository.DapperService.InsertSingleNotificationAsync(String userId, String title, String message, String type, String referenceId) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 4624
+---------------------------------------------------------------------------------------------
+
+[ERROR] 01 September 2026 09:48:35 AM
+  :[LoggedInUser]: anonymous
+  :[Message]: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.
+A transaction that was started in a MARS batch is still active at the end of the batch. The transaction is rolled back.
+  :[StackTrace]:    at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__210_1(IAsyncResult result)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Yafa.Infrastructure.Repository.DapperService.InsertSingleNotificationAsync(String userId, String title, String message, String type, String referenceId) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 4624
+   at Yafa.Infrastructure.Repository.DapperService.InsertSingleNotificationAsync(String userId, String title, String message, String type, String referenceId) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 4634
+   at Yafa.Infrastructure.Job.CheckInCurrentDayReminderJob.ProcessSingleReminderAsync(CheckInReminderDto booking) in D:\esolz\YAFA App\Yafa.Infrastructure\Job\CheckInCurrentDayReminderJob.cs:line 87
+   at Yafa.Infrastructure.Job.CheckInCurrentDayReminderJob.SendCheckInRemindersInCurrentDayAsync() in D:\esolz\YAFA App\Yafa.Infrastructure\Job\CheckInCurrentDayReminderJob.cs:line 60
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED_WITH_ERRORS] 01 September 2026 04:18:35 AM UTC
+  :[Job]: CheckInReminderJob
+  :[Message]: Total: 1 | Success: 0 | Failed: 1 | FailedBookings: [24ae66b3-8e43-4a70-a432-f55001a862a6]
+  :[Duration]: 0.62s
+---------------------------------------------------------------------------------------------
+
+[JOB:STARTED] 01 September 2026 04:18:37 AM UTC
+  :[Job]: CheckOutReminderJob
+  :[Message]: Job triggered at 04:18:37 UTC
+---------------------------------------------------------------------------------------------
+
+[ERROR] 01 September 2026 09:48:38 AM
+  :[LoggedInUser]: anonymous
+  :[Message]: Success
+  :[StackTrace]:    at Yafa.Infrastructure.Repository.DapperService.GetTodayCheckOutsAsync(CancellationToken ct) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 4932
+   at Yafa.Infrastructure.Job.CheckOutReminderJob.SendCheckOutRemindersAsync() in D:\esolz\YAFA App\Yafa.Infrastructure\Job\CheckOutReminderJob.cs:line 33
+---------------------------------------------------------------------------------------------
+
+[JOB:FAILED] 01 September 2026 04:18:38 AM UTC
+  :[Job]: CheckOutReminderJob
+  :[Message]: Failed to fetch bookings from DB. Error: Success
+  :[Duration]: 0.22s
+---------------------------------------------------------------------------------------------
+
+[ERROR] 01 September 2026 09:57:12 AM
+  :[LoggedInUser]: 784e8181-38ba-48c9-825c-17f489602200
+  :[Message]: Invalid object name 'BookingSource'.
+  :[StackTrace]:    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryMultipleAsync(IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1042
+   at Yafa.Infrastructure.Repository.DapperService.AdminAddNewBookingAsync(AdminAddNewBookingRequestDTO req) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 754
+---------------------------------------------------------------------------------------------
+
+[ERROR] 01 September 2026 09:57:12 AM
+  :[LoggedInUser]: 784e8181-38ba-48c9-825c-17f489602200
+  :[Message]: Invalid object name 'BookingSource'.
+  :[StackTrace]:    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryMultipleAsync(IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1042
+   at Yafa.Infrastructure.Repository.DapperService.AdminAddNewBookingAsync(AdminAddNewBookingRequestDTO req) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 754
+   at Yafa.Infrastructure.Repository.DapperService.AdminAddNewBookingAsync(AdminAddNewBookingRequestDTO req) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 783
+   at Yafa.Api.Controllers.Admin.AdminPropertiesBooking.AdminPanelAddNewBooking(AdminAddNewBookingRequestDTO request) in D:\esolz\YAFA App\Yafa.Api\Controllers\Admin\AdminPropertiesBookingController.cs:line 114
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Yafa.Api.Middleware.ScalarAuthMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\esolz\YAFA App\Yafa.Api\Middleware\ScalarAuthMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Yafa.Api.Extension.ExceptionHandling.InvokeAsync(HttpContext context, RequestDelegate next) in D:\esolz\YAFA App\Yafa.Api\Extension\ExceptionHandling.cs:line 23
+---------------------------------------------------------------------------------------------
+
+[ERROR] 01 September 2026 09:58:19 AM
+  :[LoggedInUser]: 784e8181-38ba-48c9-825c-17f489602200
+  :[Message]: Invalid object name 'BookingSource'.
+  :[StackTrace]:    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryMultipleAsync(IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1042
+   at Yafa.Infrastructure.Repository.DapperService.AdminAddNewBookingAsync(AdminAddNewBookingRequestDTO req) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 754
+---------------------------------------------------------------------------------------------
+
+[ERROR] 01 September 2026 09:58:19 AM
+  :[LoggedInUser]: 784e8181-38ba-48c9-825c-17f489602200
+  :[Message]: Invalid object name 'BookingSource'.
+  :[StackTrace]:    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryMultipleAsync(IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1042
+   at Yafa.Infrastructure.Repository.DapperService.AdminAddNewBookingAsync(AdminAddNewBookingRequestDTO req) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 754
+   at Yafa.Infrastructure.Repository.DapperService.AdminAddNewBookingAsync(AdminAddNewBookingRequestDTO req) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 783
+   at Yafa.Api.Controllers.Admin.AdminPropertiesBooking.AdminPanelAddNewBooking(AdminAddNewBookingRequestDTO request) in D:\esolz\YAFA App\Yafa.Api\Controllers\Admin\AdminPropertiesBookingController.cs:line 114
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Yafa.Api.Middleware.ScalarAuthMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\esolz\YAFA App\Yafa.Api\Middleware\ScalarAuthMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Yafa.Api.Extension.ExceptionHandling.InvokeAsync(HttpContext context, RequestDelegate next) in D:\esolz\YAFA App\Yafa.Api\Extension\ExceptionHandling.cs:line 23
+---------------------------------------------------------------------------------------------

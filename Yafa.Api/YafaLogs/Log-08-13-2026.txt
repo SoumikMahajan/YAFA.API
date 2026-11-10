@@ -1,0 +1,12 @@
+
+[JOB:COMPLETED] 13 August 2026 11:00:14 AM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: 4 expired holds released and related booking fees deleted.
+  :[Duration]: 0.19s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 13 August 2026 11:02:10 AM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: 4 expired holds released and related booking fees deleted.
+  :[Duration]: 0.17s
+---------------------------------------------------------------------------------------------

@@ -1,0 +1,1353 @@
+
+[JOB:COMPLETED] 06 October 2026 01:59:42 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:STARTED] 06 October 2026 01:59:42 PM UTC
+  :[Job]: CheckInReminderJob
+  :[Message]: Job triggered at 13:59:42 UTC
+---------------------------------------------------------------------------------------------
+
+[JOB:STARTED] 06 October 2026 01:59:42 PM UTC
+  :[Job]: CheckOutReminderJob
+  :[Message]: Job triggered at 13:59:42 UTC
+---------------------------------------------------------------------------------------------
+
+[JOB:PROCESSING] 06 October 2026 01:59:42 PM UTC
+  :[Job]: CheckInReminderJob
+  :[Message]: Found 1 booking(s) for today. Starting notifications.
+---------------------------------------------------------------------------------------------
+
+[ERROR] 06 October 2026 07:29:42 PM
+  :[LoggedInUser]: anonymous
+  :[Message]: Success
+  :[StackTrace]:    at Yafa.Infrastructure.Repository.DapperService.GetTodayCheckOutsAsync(CancellationToken ct) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 5357
+   at Yafa.Infrastructure.Job.CheckOutReminderJob.SendCheckOutRemindersAsync() in D:\esolz\YAFA App\Yafa.Infrastructure\Job\CheckOutReminderJob.cs:line 33
+---------------------------------------------------------------------------------------------
+
+[JOB:FAILED] 06 October 2026 01:59:42 PM UTC
+  :[Job]: CheckOutReminderJob
+  :[Message]: Failed to fetch bookings from DB. Error: Success
+  :[Duration]: 0.16s
+---------------------------------------------------------------------------------------------
+
+[JOB:STARTED] 06 October 2026 01:59:42 PM UTC
+  :[Job]: CheckInReminderJob
+  :[Message]: Job triggered at 13:59:42 UTC
+---------------------------------------------------------------------------------------------
+
+[ERROR] 06 October 2026 07:29:42 PM
+  :[LoggedInUser]: anonymous
+  :[Message]: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.
+A transaction that was started in a MARS batch is still active at the end of the batch. The transaction is rolled back.
+  :[StackTrace]:    at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__210_1(IAsyncResult result)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Yafa.Infrastructure.Repository.DapperService.InsertSingleNotificationAsync(String userId, String title, String message, String type, String referenceId) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 5049
+---------------------------------------------------------------------------------------------
+
+[JOB:PROCESSING] 06 October 2026 01:59:42 PM UTC
+  :[Job]: CheckInReminderJob
+  :[Message]: Found 1 booking(s) for tomorrow. Starting notifications.
+---------------------------------------------------------------------------------------------
+
+[ERROR] 06 October 2026 07:29:42 PM
+  :[LoggedInUser]: anonymous
+  :[Message]: Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.
+A transaction that was started in a MARS batch is still active at the end of the batch. The transaction is rolled back.
+  :[StackTrace]:    at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__210_1(IAsyncResult result)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at Yafa.Infrastructure.Repository.DapperService.InsertSingleNotificationAsync(String userId, String title, String message, String type, String referenceId) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 5049
+   at Yafa.Infrastructure.Repository.DapperService.InsertSingleNotificationAsync(String userId, String title, String message, String type, String referenceId) in D:\esolz\YAFA App\Yafa.Infrastructure\Repository\DapperService.cs:line 5059
+   at Yafa.Infrastructure.Job.CheckInCurrentDayReminderJob.ProcessSingleReminderAsync(CheckInReminderDto booking) in D:\esolz\YAFA App\Yafa.Infrastructure\Job\CheckInCurrentDayReminderJob.cs:line 87
+   at Yafa.Infrastructure.Job.CheckInCurrentDayReminderJob.SendCheckInRemindersInCurrentDayAsync() in D:\esolz\YAFA App\Yafa.Infrastructure\Job\CheckInCurrentDayReminderJob.cs:line 60
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED_WITH_ERRORS] 06 October 2026 01:59:42 PM UTC
+  :[Job]: CheckInReminderJob
+  :[Message]: Total: 1 | Success: 0 | Failed: 1 | FailedBookings: [868a69da-0fa6-4d98-a6aa-39ea9eb1c7cd]
+  :[Duration]: 0.33s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 01:59:45 PM UTC
+  :[Job]: CheckInReminderJob
+  :[Message]: Total: 1 | Success: 1 | Failed: 0
+  :[Duration]: 3.42s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:00:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:01:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:02:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:03:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:04:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:05:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:06:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:07:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:08:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:09:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:10:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:11:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:12:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:13:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:14:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:15:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:16:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:17:11 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:18:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:19:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:20:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:21:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:22:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:23:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:24:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:25:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:26:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:27:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:28:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:29:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:30:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:31:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:32:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:33:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:34:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:35:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:36:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:37:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:38:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:39:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:40:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:41:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:42:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:43:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:44:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:45:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:46:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:47:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:48:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:49:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:50:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:51:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:52:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:53:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:54:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:55:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:56:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:57:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:58:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 02:59:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:00:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:01:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:02:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:03:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:04:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:05:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:06:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:07:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:08:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:09:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:10:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:11:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:12:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:13:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:14:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:15:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:16:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.01s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:17:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:18:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:19:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:20:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:21:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:22:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:23:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:24:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:25:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:26:15 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:27:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:28:42 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:29:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:30:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:31:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:32:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:33:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:34:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:35:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:36:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:37:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:38:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:39:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:40:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:41:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:42:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:43:12 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:44:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:45:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:46:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:47:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:48:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:49:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:50:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:51:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:52:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:53:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:54:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:55:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:56:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:57:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.01s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:58:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 03:59:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:00:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:01:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:02:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:03:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:04:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:05:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:06:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:07:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:08:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:09:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:10:13 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:11:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:12:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:13:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:14:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:15:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.01s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:16:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.01s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:17:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.01s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:18:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.04s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:19:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:20:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.01s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:21:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.02s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:22:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.01s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:23:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:24:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.02s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:25:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.01s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:26:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.01s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:27:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:28:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.02s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:29:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:30:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:31:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:32:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:33:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:34:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:35:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:36:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:37:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:38:14 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:39:15 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:40:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:41:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:42:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:43:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:44:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:45:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:46:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:47:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:48:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:49:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:50:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:51:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:52:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:53:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:54:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:55:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:56:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:57:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:58:00 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 04:59:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:00:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:01:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:02:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:03:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:04:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:05:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:06:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:07:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:08:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:09:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:10:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:11:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:12:01 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:13:18 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:14:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:15:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:16:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:17:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:18:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:19:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:20:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:21:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:22:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:23:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:24:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:25:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:26:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:27:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
+
+[JOB:COMPLETED] 06 October 2026 05:28:03 PM UTC
+  :[Job]: HoldExpiryJob
+  :[Message]: [ExtensionHolds] 0 expired extension hold(s) released.
+  :[Duration]: 0.00s
+---------------------------------------------------------------------------------------------
